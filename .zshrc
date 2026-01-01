@@ -23,8 +23,8 @@ source "$ZDOTDIR/history.zsh"
 source "$ZDOTDIR/zsh-autosuggestions.zsh"
 
 # yay packages
+export YSU_HARDCORE=1
 source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
-export YSU_HARCORE=1 
 
 export PATH="$HOME/.local/bin:$PATH"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
