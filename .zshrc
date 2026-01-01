@@ -10,6 +10,9 @@ zstyle :compinstall filename "$ZDOTDIR/.zshrc"
 autoload -Uz compinit
 compinit
 
+# zoxide
+eval "$(zoxide init zsh --cmd cd)"
+
 # p10k & theme (installed with yay)
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 [[ -f $ZDOTDIR/.p10k.zsh ]] && source $ZDOTDIR/.p10k.zsh
@@ -17,5 +20,11 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # Sources for cleaner config
 source "$ZDOTDIR/aliases.zsh"
 source "$ZDOTDIR/history.zsh"
+source "$ZDOTDIR/zsh-autosuggestions.zsh"
+
+# yay packages
+source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
+export YSU_HARCORE=1 
 
 export PATH="$HOME/.local/bin:$PATH"
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
